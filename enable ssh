@@ -1,0 +1,22 @@
+enable
+conf t
+int vlan 1
+no shut
+username david pass cisco
+username david priv 15
+line vty 0 4
+login local
+transport input all
+ip domain-name cciepython.com
+crypto key generate rsa
+1024
+
+
+int vlan 1
+no shut
+ip address 192.168.122.72 255.255.255.0
+
+end
+wr
+
+
